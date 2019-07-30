@@ -18,7 +18,7 @@ Install
 Install from the internet:
 
 ```bash
-curl -Ls https://raw.githubusercontent.com/thinktandem/lando-tandem/master/getPlugin.sh?token=ABTTJF3MQRPBRXUIUN5GF3K5JGE4A > /tmp/lando-tandem \
+curl -Ls https://raw.githubusercontent.com/thinktandem/lando-tandem/master/getPlugin.sh?token=ABTTJF67TBV5JQK2KZSZRNK5JGIFO > /tmp/lando-tandem \
   && chmod +x /tmp/lando-tandem \
   && /tmp/lando-tandem
 ````
