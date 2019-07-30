@@ -52,7 +52,7 @@ checkOrCreatePluginsDir () {
 
 installPlugin () {
   if [ checkOrCreatePluginsDir ]; then
-    git clone git@github.com:serundeputy/project-starter.git ~/.lando/plugins/${OPTION_PLUGIN_NAME}
+    git clone git@github.com:thinktandem/Lando-Tandem.git ~/.lando/plugins/${OPTION_PLUGIN_NAME}
     return 0
   fi
 }
