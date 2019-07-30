@@ -18,9 +18,9 @@ Install
 Install from the internet:
 
 ```bash
-curl -Ls https://github.com/thinktandem/Lando-Tandem/releases/download/0.1.0/Lando-Tandem > /tmp/lando-tandem \
+curl -Ls https://raw.githubusercontent.com/thinktandem/Lando-Tandem/master/getPlugin.sh?token=ABTTJF3MQRPBRXUIUN5GF3K5JGE4A > /tmp/lando-tandem \
   && chmod +x /tmp/lando-tandem \
-  && /tmp/lando-tandem/getPlugin
+  && /tmp/lando-tandem
 ````
 
 
