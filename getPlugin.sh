@@ -19,7 +19,7 @@ while (( "$#" )); do
 done
 
 # Make sure there is a lando install to download a plugin to.
-checkForLando () {
+check_for_lando () {
   if [ -d ~/.lando ]; then
     echo "Lando is ready to go!"
     return 0
@@ -30,8 +30,8 @@ checkForLando () {
   fi
 }
 
-checkOrCreatePluginsDir () {
-  if [ checkForLando ]; then
+check_or_create_plugins_dir () {
+  if [ check_for_lando ]; then
     if [ -d ~/.lando/plugins ]; then
       echo "Plugins directory is ready to go!"
       return 0
@@ -50,12 +50,12 @@ checkOrCreatePluginsDir () {
   fi
 }
 
-installPlugin () {
-  if [ checkOrCreatePluginsDir ]; then
+install_plugin () {
+  if [ check_or_create_plugins_dir ]; then
     git clone git@github.com:thinktandem/Lando-Tandem.git ~/.lando/plugins/${OPTION_PLUGIN_NAME}
     return 0
   fi
 }
 
 # Do the things
-installPlugin
+install_plugin

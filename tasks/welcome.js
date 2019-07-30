@@ -14,4 +14,9 @@ module.exports = lando => ({
  */
 function tandemWelcome() {
   console.log("\n\t\tWelcome aboard new Tandemite!\n");
+  console.log("\n");
+  console.table({
+    "Tandem Docs": "https://docs.thinktandem.io",
+    "Lando Docs": "https://docs.devwithlando.io"
+  });
 }
