@@ -1,19 +1,33 @@
 'use strict';
 
-const OktoKit = require('@octokit/rest');
+const OctoKit = require('@octokit/rest');
+const _ = require('lodash');
+
 const octokit = new OctoKit();
 
-const repos = octokit.repos.listForOrg({
-  org: 'thinktandem'
-}).then(({ data }) => {
-  console.log(data);
-  return data;
-});
+const repos = (answers, Promise) => {
+  return new Promise((res, rej) => {
+    octokit.repos.listForOrg({
+      org: 'thinktandem'
+    });
+  });
+};
+
+const getAutoCompleteRepos = (answers, Promise, input = null) => {
+  if (!_.isEmpty(repos)) {
+    return Promise.resolve(repos).filter(site => _.startsWith(site.name, input));
+  } else {
+    return repos(answers, Promise).then(sites => {
+      repos = sites;
+      return repos;
+    });
+  }
+};
 
 module.exports = {
   sources: [{
-    name: 'tandem-project',
-    label: 'tandem-project',
+    name: 'tandem-create-project',
+    label: 'tandem-create-project',
     options: lando => ({
       'github-repo': {
         describe: 'GitHub git url',
@@ -21,9 +35,12 @@ module.exports = {
         interactive: {
           type: 'autocomplete',
           message: 'Which Tandem start state?',
-          source: (ansewers, input) => {
-            return repos;
+          source: (answers, input) => {
+            console.log('answers', answers);
+            return getAutoCompleteRepos(answers, lando.Promise, input);
           },
+          when: answers => answers.source === 'tandem-project',
+          weight: 130,
         }
       }
     }),
