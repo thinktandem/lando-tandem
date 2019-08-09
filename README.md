@@ -1,16 +1,16 @@
 Lando Tandem Plugin
 ===================
 
-Get the `tandem` plugin for lando.
+[![Build Status](https://travis-ci.com/thinktandem/lando-tandem.svg?branch=master)](https://travis-ci.com/thinktandem/lando-tandem)
 
 About Tandem Plugin
 -------------------
 
-The `tandem` plugin provides automation commands for the Tandem agency.
+The `lando-tandem` plugin provides automation commands for the Tandem agency.
 
 ex.
 
-* lando welcome // Hello new Tandemite!
+* lando welcome // Welcome aboard new Tandemite!
 
 Install
 -------
