@@ -33,5 +33,4 @@ script:
   - mkdir -p $HOME/.lando/plugins
   - cp -a /home/travis/build/thinktandem/lando-tandem /home/travis/.lando/plugins/lando-tandem
   - lando --clear
-  - lando
   - lando welcome
