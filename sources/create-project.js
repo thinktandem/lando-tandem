@@ -8,7 +8,7 @@ const octokit = new OctoKit();
 const repos = (answers, Promise) => {
   return new Promise((res, rej) => {
     octokit.repos.listForOrg({
-      org: 'thinktandem'
+      org: 'thinktandem',
     });
   });
 };
@@ -41,8 +41,8 @@ module.exports = {
           },
           when: answers => answers.source === 'tandem-project',
           weight: 130,
-        }
-      }
+        },
+      },
     }),
   }],
 };
