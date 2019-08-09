@@ -30,9 +30,8 @@ script:
   - yarn test
 
   # Sanity check run lando welcome
-  - ls -alh $HOME/.lando
   - mkdir -p $HOME/.lando/plugins
   - cp -a /home/travis/build/thinktandem/lando-tandem /home/travis/.lando/plugins/lando-tandem
-  - lando
   - lando --clear
+  - lando
   - lando welcome
