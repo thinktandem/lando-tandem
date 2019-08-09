@@ -28,3 +28,10 @@ script:
 
   # Code standards.
   - yarn test
+
+  - ls -alh $HOME
+  - ls -alh $HOME/.lando
+  - cp -a /home/travis/build/thinktandem/lando-tandem /home/travis/.lando/plugins/lando-tandem
+  - lando
+  - lando --clear
+  - lando welcome
