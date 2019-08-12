@@ -18,9 +18,6 @@ Install
 Install from the internet:
 
 ```bash
-curl -Ls https://raw.githubusercontent.com/thinktandem/lando-tandem/master/scripts/get-plugin.sh?token=ABTTJF67TBV5JQK2KZSZRNK5JGIFO > /tmp/lando-tandem \
-  && chmod +x /tmp/lando-tandem \
-  && /tmp/lando-tandem
-````
-
+curl -H 'Accept: application/vnd.github.v3.raw' -o /tmp/get-plugin.sh https://api.github.com/repos/thinktandem/lando-tandem/contents/scripts/get-plugin.sh && chmod +x /tmp/get-plugin.sh && /tmp/get-plugin.sh && cd ~/.lando/plugins/lando-tandem; yarn
+```
 

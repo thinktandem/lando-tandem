@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set default options
-OPTION_PLUGIN_NAME=${OPTION_PLUGIN_NAME:-tandem}
+OPTION_PLUGIN_NAME=${OPTION_PLUGIN_NAME:-lando-tandem}
 
 # PARSE THE ARGZZ AND OPTZ
 while (( "$#" )); do
@@ -52,7 +52,7 @@ check_or_create_plugins_dir () {
 
 install_plugin () {
   if [ check_or_create_plugins_dir ]; then
-    git clone git@github.com:thinktandem/Lando-Tandem.git ~/.lando/plugins/${OPTION_PLUGIN_NAME}
+    git clone git@github.com:thinktandem/lando-tandem.git ~/.lando/plugins/${OPTION_PLUGIN_NAME}
     return 0
   fi
 }
