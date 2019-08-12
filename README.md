@@ -20,10 +20,9 @@ Install from the internet:
 Note to run this command you will need `yarn` installed.
 
 ```bash
-curl -H 'Accept: application/vnd.github.v3.raw' -o /tmp/get-plugin.sh https://api.github.com/repos/thinktandem/lando-tandem/contents/scripts/get-plugin.sh \
-&& chmod +x /tmp/get-plugin.sh \
-&& /tmp/get-plugin.sh \
-&& cd ~/.lando/plugins/lando-tandem \
-yarn
+curl -H 'Accept: application/vnd.github.v3.raw' -o /tmp/get-plugin.sh https://api.github.com/repos/thinktandem/lando-tandem/contents/scripts/get-plugin.sh && \
+chmod +x /tmp/get-plugin.sh && \
+/tmp/get-plugin.sh && \
+yarn --cwd ~/.lando/plugins/lando-tandem
 ```
 
