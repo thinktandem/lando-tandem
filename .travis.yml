@@ -1,10 +1,7 @@
 language: node_js
 node_js:
   - "10"
-matrix:
-  - os: linux
-    node_js:
-      - "10"
+dist: xenial
 cache:
   yarn: true
   directories:
@@ -20,15 +17,10 @@ before_install:
   - sudo bash -c "curl -Ls https://github.com/lando/hyperdrive/releases/download/v0.5.4/hyperdrive > /usr/local/bin/hyperdrive"
   - sudo chmod +x /usr/local/bin/hyperdrive
 script:
-  # Add Repo key to prevent hyperdrive install errors.
-  - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6B05F25D762E3157
-
   # Setup hyperdrive
   - hyperdrive -y --name "James T. Kirk" --email kirk@enterprise.mil
-
   # Code standards.
   - yarn test
-
   # Sanity check run lando welcome
   - mkdir -p $HOME/.lando/plugins
   - cp -a /home/travis/build/thinktandem/lando-tandem /home/travis/.lando/plugins/lando-tandem
