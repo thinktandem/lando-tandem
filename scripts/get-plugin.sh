@@ -54,7 +54,7 @@ install_plugin () {
   if [ check_or_create_plugins_dir ]; then
     git clone git@github.com:thinktandem/lando-tandem.git ~/.lando/plugins/${OPTION_PLUGIN_NAME}
     cd ~/.lando/plugins/${OPTION_PLUGIN_NAME}
-    yarn install | npm install | echo "need to install either yarn or npm"
+    yarn install || npm install || echo "need to install either yarn or npm"
     return 0
   fi
 }
