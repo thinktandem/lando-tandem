@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@octokit/rest": "^16.28.7",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.19"
   },
   "devDependencies": {
     "eslint": "^6.1.0",
